@@ -1,7 +1,269 @@
-body {
-	background: #f1f1f1;
+// -----------------------------------------------------------------------------
+// Config & Placeholders
+// -----------------------------------------------------------------------------
+
+$color-black: #333;
+$color-grey: #666;
+$color-blue: #37bcfa;
+$color-offwhite: #eee;
+
+%type-normal 	{ font-weight: 500; 	}
+%type-bold 		{ font-weight: 700; 	}
+%type-italic 	{ font-style: italic; }
+
+%font-title 			{ font-size: 2.5em; 	}
+%font-heading 		{ font-size: 1.5em; 	}
+%font-subheading 	{ font-size: 1.25em; 	}
+%font-standard 		{ font-size: 1em; 		}
+%font-small 			{ font-size: 0.83em; 	}
+
+@mixin columns ($count) {
+	-webkit-column-count: $count;
+	-moz-column-count: $count;
+	column-count: $count;
 }
 
+// -----------------------------------------------------------------------------
+// Global
+// -----------------------------------------------------------------------------
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+html {
+	border-top: 0.25em solid $color-blue;
+}
+
+body {
+	@extend %type-normal;
+	max-width: 40em;
+	margin: 0 auto;
+	padding: 0 1em;
+	color: $color-black;
+	line-height: 1.4;
+	font-family: 'ff-meta-serif-web-pro', Georgia, serif;
+}
+
+a {
+	color: $color-blue;
+	text-decoration: none;
+	transition: 0.5s color ease;
+
+	&:hover {
+		color: darken($color-blue, 20%);
+	}
+}
+
+i, em {
+	@extend %type-italic;
+}
+
+h1, h2, h3, h4, h5, h6, b, strong {
+	@extend %type-bold;
+}
+
+h1 {
+	@extend %font-heading;
+}
+
+h2 {
+	@extend %font-subheading;
+}
+
+h3 {
+	@extend %font-standard;
+}
+
+::selection {
+	background-color: $color-blue;
+	color: white;
+}
+
+// -----------------------------------------------------------------------------
+// Header
+// -----------------------------------------------------------------------------
+
 header {
-	background: black;
+
+	h1 {
+		@extend %font-title;
+		margin-bottom: 0;
+		line-height: 0.9;
+	}
+
+	h2 {
+		@extend %type-normal;
+		margin: 0;
+	}
+
+}
+
+// -----------------------------------------------------------------------------
+// Body
+// -----------------------------------------------------------------------------
+
+section {
+
+	h1 {
+		border-bottom: 1px solid $color-offwhite;
+	}
+
+	h1, h2 {
+		margin-bottom: 0.2em;
+	}
+
+	h2 {
+		+ p {
+			margin-top: 0;
+		}
+	}
+
+	small {
+		@extend %type-normal;
+		display: block;
+	}
+
+}
+
+.skills {
+	text-align: justify;
+	margin-top: 1em;
+}
+
+.skills__copy {
+	padding-right: 1em;
+	p {
+		margin: 0;
+	}
+}
+
+.skills__list {
+	@extend %font-small;
+	padding: 1em;
+	margin-top: 1em;
+	background: $color-offwhite;
+}
+
+.item-list {
+
+	text-align: justify;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	@include columns(3);
+
+}
+
+// -----------------------------------------------------------------------------
+// Footer
+// -----------------------------------------------------------------------------
+
+footer {
+
+	padding: 1em 0;
+	border-top: 1px solid $color-offwhite;
+	text-align: center;
+
+	ul, li {
+		display: inline;
+	}
+
+}
+
+// -----------------------------------------------------------------------------
+// @media
+// -----------------------------------------------------------------------------
+
+@media screen {
+	
+	.print-me {
+		display: none;
+	}
+
+}
+
+@media screen and (min-width: 30em) {
+
+	body {
+		font-size: 112.5%;
+	}
+
+	section {
+
+		small {
+			margin-left: 0.5em;
+			display: inline-block;
+			vertical-align: baseline;
+		}
+
+	}
+
+}
+
+@media screen and (min-width: 50em) {
+
+	body {
+		font-size: 125%;
+	}
+
+	.skills {
+		> * {
+			display: inline-block;
+			vertical-align: top;
+			margin-right: -4px;
+		}
+	}
+
+	.skills__copy {
+		width: 60%;
+	}
+
+	.skills__list {
+		margin-top: 0;
+		width: 40%;
+	}
+
+	.item-list {
+		@include columns(2);
+	}
+
+}
+
+// -----------------------------------------------------------------------------
+// Print
+// -----------------------------------------------------------------------------
+
+@media print {
+
+	html {
+		border-top: none;
+	}
+
+	body {
+		font-size: 10pt;
+	}
+
+	a {
+		
+		&:link,
+		&:visited {
+			color: $color-black;
+		}
+
+		&::after {
+			content: " (" attr(href) ") ";
+		}
+
+	}
+
+	section {
+		page-break-inside: avoid;
+	}
+
+	footer {
+		border: none;
+	}
+
 }

@@ -1,70 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html class="is-joyful">
 <head>
 	<title>Mike Fowler, Software Engineer &middot; Resume</title>
+	<!--<script type="text/javascript" src="//use.typekit.net/jal3zqa.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-	<header>
+	<header role="banner">
 		<h1>Mike Fowler</h1>
-		<h2>Software Engineer</h2>
+		<h2>Software Engineer &middot; <a href="mailto:mike@mikefowler.me">mike@mikefowler.me</a></h2>
 	</header>
 
-	<main>
+	<main role="main">
 
 		<section id="profile">
 			
 			<h1>Profile</h1>
 			
-			<p>To create work that reﬂects my passion and dedication to my craft, to continually learn and grow professionally, to produce and promote clean, standards-compliant code, and to continually expand my participation in the web development community.</p>
+			<p>To create work that reﬂects the passion and dedication I have for my craft; to be a constant learner, pushing the boundaries of the web platform; to produce and promote web standards and best practices; and to be an active participant in the web development community, including <a href="http://github.com/mikefowler">open source</a> projects.</p>
 
 		</section>
 
 		<section id="experience">
 
-			<h1>Experience</h1>
+			<h1>Currently</h1>
 
-			<h2>Findery <span>Software Engineer, 2012 — Present</span></h2>
-			<p></p>
+			<h2><a href="http://findery.com">Findery</a> <small><em>Software Engineer, 2012 — Present</em></small></h2>
+			<p>Led efforts to rearchitect the frontend of the website, striving for modular CSS and leveraging Compass to implement a maintainable architecture. Developed a <a href="http://webapp.findery.com">webapp</a> using Backbone, Marionette and our public API to bring a native-feeling experience of Findery to the web. Contributed to the development of our <a href="http://api.findery.com">public API</a>, working with NodeJS &amp; Express.</p>
 
-			<h2>MyWebGrocer <span>Frontend Developer, 2011 — 2012</span></h2>
-			<p></p>
+			<h2><a href="http://coderdojosf.com">CoderDojoSF</a> <small><em>Lead Organizer &amp; Mentor</em></small></h2>
+			<p>Planned events, organized volunteers, taught classes, and mentored for the San Francisco chapter of CoderDojo, a volunteer-led movement of free coding clubs for kids.</p>
 
-			<h2>MyPointNow <span>Frontend Developer + Design, 2010 — 2011</span></h2>
-			<p></p>
+			<h2><a href="https://twitter.com/themixinsf">The Mixin</a> <small><em>Co-organizer</em></small></h2>
+			<p>Helping organize and host a San Francisco Sass meetup.</p>
+
+		</section>
+
+		<section id="skills">
+
+			<h1>Skills</h1>
+
+			<div class="skills">
+
+				<div class="skills__copy">
+					<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+				</div>
+
+				<div class="skills__list">
+					<ul class="item-list">
+						<li>JavaScript</li>
+						<li>CSS</li>
+						<li>Sass</li>
+						<li>Compass</li>
+						<li>HTML</li>
+						<li>Backbone</li>
+						<li>Marionette</li>
+						<li>Ember</li>
+						<li>Grunt</li>
+						<li>Git</li>
+						<li>Photoshop</li>
+						<li>Illustrator</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</section>
+
+		<section id="previously">
+
+			<h1>Previously</h1>
+
+			<h2>MyWebGrocer <small><em>Frontend Developer, 2011 — 2012</em></small></h2>
+			<p>Promoted web standards and encouraged adoption of new technologies within the organization, including Sass, Compass, CSS3, HTML5, Modernizr and Coffeescript. Developed a client application using KnockoutJS and Google Charts to generate reports with data pulled from an internal API. Led a redesign of an eCommerce SEO platform, designing from the ground up and then developing a cross-browser responsive experience. Implemented a stylesheet architecture using Sass, allowing for streamlined creation of client themes.</p>
+
+			<h2>MyPointNow <small><em>Software Engineer &amp; Designer, 2010 — 2011</em></small></h2>
+			
+			<p>Developed consumer-facing and administrative solutions using PHP, HTML, CSS and JavaScript. Refactored existing JavaScript, leading to better performance and a richer user experience.</p>
 
 		</section>
 
 		<section id="education">
 
 			<h1>Education</h1>
-			<h2>Champlain College <span>BS Electronic Game &amp; Interactive Development: Art &amp; Animation</span></h2>
-
-		</section>
-
-		<section id="skills">
-			
-			<h1>Skills + Tools</h1>
-			
-			<ul>
-				<li>JavaScript</li>
-				<li>HTML</li>
-				<li>CSS</li>
-				<li>Sass, Compass, Less</li>
-				<li>jQuery</li>
-				<li>Chrome DevTools</li>
-				<li>Git</li>
-				<li>Backbone + Marionette</li>
-				<li>Ember</li>
-				<li>Express</li>
-				<li>Grunt</li>
-				<li>Gulp</li>
-			</ul>
+			<h2>Champlain College</h2>
+			<p>B.S. <em>Electronic Game &amp; Interactive Development: Art &amp; Animation</em></p>
 
 		</section>
 
 	</main>
+
+	<footer role="contentinfo"> 
+
+		<p>You can also find me on <a href="http://github.com/mikefowler">Github</a> and <a href="http://twitter.com/michaelrfowler">Twitter</a>. The code for this page is <a href="http://github.com/mikefowler/resume">available to all.</a></p>
+
+		<p class="print-me">This document lives at http://resume.mikefowler.me</p>
+
+	</footer>
 
 </body>
 </html>
