@@ -7,9 +7,19 @@ $color-grey: #666;
 $color-blue: #37bcfa;
 $color-offwhite: #eee;
 
-%type-normal 	{ font-weight: 500; 	}
-%type-bold 		{ font-weight: 700; 	}
-%type-italic 	{ font-style: italic; }
+%type-normal 	{
+	font-weight: 500;
+	font-family: 'ff-meta-serif-web-pro', Georgia, serif;
+}
+%type-bold 		{
+	font-weight: 700;
+	font-family: 'ff-meta-serif-web-pro', 'Georgia-Bold', Georgia, serif;
+}
+
+%type-italic 	{
+	font-style: italic;
+	font-family: 'ff-meta-serif-web-pro', 'Georgia-Italic', Georgia, serif;
+}
 
 %font-title 			{ font-size: 2.5em; 	}
 %font-heading 		{ font-size: 1.5em; 	}
@@ -43,7 +53,6 @@ body {
 	padding: 0 1em;
 	color: $color-black;
 	line-height: 1.4;
-	font-family: 'ff-meta-serif-web-pro', Georgia, serif;
 }
 
 a {
@@ -134,6 +143,7 @@ section {
 
 .skills__copy {
 	padding-right: 1em;
+	text-align: left;
 	p {
 		margin: 0;
 	}
