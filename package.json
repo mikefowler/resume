@@ -1,0 +1,17 @@
+{
+  "name": "resume.mikefowler.me",
+  "version": "0.1.0",
+  "description": "The resume of software engineer Mike Fowler",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikefowler/resume.git"
+  },
+  "author": "Mike Fowler <mike@mikefowler.me>",
+  "license": "MIT",
+  "homepage": "http://resume.mikefowler.me",
+  "devDependencies": {
+    "gulp": "~3.7.0",
+    "gulp-sass": "~0.7.1"
+  }
+}
