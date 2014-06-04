@@ -1,6 +1,6 @@
 Hey there! This repository holds my resume, publicly viewable at [resume.mikefowler.me](http://resume.mikefowler.me).
 
-Want to for this repo and use it for your own resume? Go for it.
+Want to clone this repo and use it for your own resume? Go for it.
 
 ```bash
 # Clone the repository
