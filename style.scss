@@ -105,6 +105,10 @@ header {
 	h2 {
 		@extend %type-normal;
 		margin: 0;
+
+		a {
+			display: block;
+		}
 	}
 
 }
@@ -194,10 +198,29 @@ footer {
 
 }
 
+// > 480px
+
 @media screen and (min-width: 30em) {
 
 	body {
 		font-size: 112.5%;
+	}
+
+	header {
+
+		h2 {
+
+			a {
+				display: inline;
+
+				&::before {
+					content: '\00B7';
+					margin: 0 0.25em;
+				}
+			}
+
+		}
+
 	}
 
 	section {
@@ -211,6 +234,8 @@ footer {
 	}
 
 }
+
+// > 800px
 
 @media screen and (min-width: 50em) {
 
