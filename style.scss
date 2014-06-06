@@ -7,6 +7,8 @@ $color-grey: #666;
 $color-blue: #37bcfa;
 $color-offwhite: #eee;
 
+$print-links: true;
+
 %type-normal 	{
 	font-weight: 500;
 	font-family: 'ff-meta-serif-web-pro', Georgia, serif;
@@ -287,10 +289,30 @@ footer {
 			color: $color-black;
 		}
 
-		&::after {
-			content: " (" attr(href) ") ";
+		@if ($print-links == true) {
+			&::after {
+				content: " (" attr(href) ") ";
+			}
+
+			&.no-inline-link {
+				&::after {
+					display: none;
+				}
+			}
 		}
 
+	}
+
+	.item-list {
+		li {
+			float: left;
+			width: 32%;
+		}
+	}
+
+	.skills__list {
+		background: none;
+		padding: 0;
 	}
 
 	section {
