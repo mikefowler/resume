@@ -7,7 +7,7 @@ $color-grey: #666;
 $color-blue: #37bcfa;
 $color-offwhite: #eee;
 
-$print-links: true;
+$print-links: false;
 
 %type-normal 	{
 	font-weight: 500;
@@ -201,7 +201,7 @@ footer {
 // @media
 // -----------------------------------------------------------------------------
 
-@media screen {
+@media only screen {
 	
 	.print-me {
 		display: none;
@@ -211,11 +211,7 @@ footer {
 
 // > 480px
 
-@media screen and (min-width: 30em) {
-
-	body {
-		font-size: 112.5%;
-	}
+@media only screen and (min-width: 30em) {
 
 	header {
 
@@ -248,11 +244,7 @@ footer {
 
 // > 800px
 
-@media screen and (min-width: 50em) {
-
-	body {
-		font-size: 125%;
-	}
+@media only screen and (min-width: 50em) {
 
 	.skills {
 		> * {
@@ -288,7 +280,9 @@ footer {
 	}
 
 	body {
-		font-size: 10pt;
+		max-width: none;
+		width: 100%;
+		font-size: 10pt !important;
 	}
 
 	a {
