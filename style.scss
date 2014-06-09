@@ -193,6 +193,10 @@ footer {
 	transition: none !important;
 }
 
+.alignright {
+	text-align: right;
+}
+
 // -----------------------------------------------------------------------------
 // @media
 // -----------------------------------------------------------------------------
@@ -283,10 +287,10 @@ footer {
 
 	a {
 		
-		&:link,
-		&:visited {
-			color: $color-black;
-		}
+		// &:link,
+		// &:visited {
+		// 	color: $color-black;
+		// }
 
 		@if ($print-links == true) {
 			&::after {

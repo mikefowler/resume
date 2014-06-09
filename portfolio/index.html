@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mike Fowler, Software Engineer &middot; Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<script type="text/javascript" src="//use.typekit.net/jal3zqa.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body class="preload">
+
+	<header role="banner">
+		<h1>Mike Fowler</h1>
+		<h2>Software Engineer <a class="no-inline-link" href="mailto:mike@mikefowler.me">mike@mikefowler.me</a></h2>
+	</header>
+
+	<main role="main">
+
+		<p>Here's a list of some things I'm proud to have built over the years. The projects listed here include both personal and professional projects.</p>
+
+		<section>
+
+			<h1>Code</h1>
+
+			<h2>Instajam <small><em><a href="http://mikefowler.me/instajam/">Documentation</a>, <a href="https://github.com/mikefowler/instajam">Github</a></em></small></h2>
+			<p><em>Instajam is a JavaScript wrapper for Instagram's API.</em> In the days before Instagram's web profiles, I was working on building a way to present my own photos on the web. After amassing a veritable slew of JSONP calls in my code, I decided to standardize them into a utility, and Instajam came to be.</p>
+			<p>The utility has gone through several rewrites over the years, but the core premise has remained the same: the utility defines a global, Instajam, on the root. You initialize the utility by calling its “init” method, passing in your Instagram client ID. After that, you can make calls to the their API with a simple method call, passing in options and a callback function.</p>
+
+			<h2>smallworld.js <small><em><a href="http://mikefowler.me/smallworld.js/">Documentation</a>, <a href="https://github.com/mikefowler/smallworld.js">Github</a></em></small></h2>
+			<p><em>A utility for efficiently drawing map overviews with markers.</em> At Findery, parts of our design required us to render, at times, dozens of Google maps on a page. A single piece of content, our “note”, contained two maps: neighborhood-level, and an “overview”. Sometimes a page would show a lengthy list of notes, and rendering these maps became a performance burden. smallworld.js came from those performance woes.</p>
+			<p>smallworld.js uses HTML Canvas, and draws a GeoJSON data source directly into it. Writing smallworld.js mandated that I learn a bit about map math, at first a painful experience and then one I came to enjoy. The utility projects coordinates, using the Mercator projection, onto map data sourced from Natural Earth.</p>
+
+			<h2>webapp.findery.com <small><em><a href="http://webapp.findery.com">Website</a></em></small></h2>
+			<p><em>A Backbone/Marionette application backed by an Express API, aimed at performing well on Android devices.</em> While still not officially launched, much of my time at Findery in the past year has been spent on this. Between learning the internals of both Backbone and Marionette in exhaustive detail, and researching/experimenting with ways to improve performance and user experience on Android phones, this project has taught me a lot.</p>
+			<br>
+			<h2>crossfade.js <small><em><a href="http://mikefowler.me/crossfade.js/">Documentation</a>, <a href="https://github.com/mikefowler/crossfade.js">Github</a></em></small></h2>
+			<p><em>Crossfades two images drawn into a Canvas as you scroll down a page.</em> Originally written as an experiment in re-creating one of Medium's design elements. This project allowed me to get my hands dirty with drawing image data into Canvas elements and implementing efficient draw loops using requestAnimationFrame.</p>
+
+			<h2>simple-clone <small><em><a href="https://github.com/mikefowler/simple-clone">Github</a></em></small></h2>
+			<p><em>A Sublime Text package for quickly cloning a file from one tab to another.</em> My first (and so far only) dive into Python. Sublime Text comes with support for cloning files, or creating a “New View into File”, but it doesn't work in a way that proves useful for workflow. simple-clone sets up an easy keyboard shortcut that will duplicate a file into a new tab to the right or below your current file. Useful for quickly working in two parts of a lengthy file at once.</p>
+
+			<h2>Companimation <small><em><a href="http://mikefowler.me/companimation/">Documentation</a>, <a href="https://github.com/mikefowler/companimation">Github</a></em></small></h2>
+			<p><em>An extension for Compass providing CSS Animation mixins and preset animations based on Animate.css</em>. Before the official Animation module landed in Compass, I published an extension of my own. Companimation, in addition to providing mixins for defining animations and keyframes, provided Animate.css animations as Sass placeholders, allowing a developer to quickly pull in only the animations they needed without bloating their output.</p>
+
+		</section>
+
+		<section>
+
+			<h1>Community</h1>
+
+			<h2>CoderDojoSF</h2>
+			<p>In July 2013 I took over leadership of the San Francisco's chapter of CoderDojo, a volunteer-led movement of free coding clubs for kids. During my time as the lead mentor, I helped organize events, coordinate mentor participation, plan cirriculum and teach classes. We also shipped a Rails app that helped us sign up students for classes and also served as a living database of previous classes we'd taught.</p>
+		
+			<h2>The Mixin</h2>
+			<p>For the past six months I've been helping plan and emcee a local Sass meetup with <a href="http://twitter.com/jina">@jina</a>. We launched a <a href="http://themixinsf.com/">simple website</a> to show upcoming events and maintain a list of previous meetups.</p>
+		
+		</section>
+
+		<section>
+
+			<h1>In Progress</h1>
+
+			<h2>Farmers Markets In… <small><em><a href="https://github.com/mikefowler/farmers-markets">Github</a></em></small></h2>
+			<p><em>Simple app for searching for farmers markets in an area, using the USDA Farmers Markets API</em>. While the USDA provides a web interface for searching for markets, and a rudimentary API for fetching data, both leave much to be desired. This project will accomplish two things: a frontend component with better design for searching for markets, and an API layer that provides better formatted USDA API responses and caching.</p>
+
+		</section>
+		
+	</main>
+
+	<footer role="contentinfo"> 
+
+		<p>You can also find me on <a href="http://github.com/mikefowler">Github</a>, <a href="http://twitter.com/michaelrfowler">Twitter</a> and <a href="http://linkedin.com/in/michaelrfowler/">LinkedIn</a>.<!--The code for this page is <a href="http://github.com/mikefowler/resume">available to all.</a>--></p>
+
+		<p class="print-me">This document lives at http://resume.mikefowler.me</p>
+
+	</footer>
+
+	<script src="app.js"></script>
+
+</body>
+</html>
