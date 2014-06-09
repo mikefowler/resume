@@ -12,6 +12,7 @@
   "homepage": "http://resume.mikefowler.me",
   "devDependencies": {
     "gulp": "~3.7.0",
-    "gulp-sass": "~0.7.1"
+    "gulp-sass": "~0.7.1",
+    "gulp-connect": "~2.0.5"
   }
 }

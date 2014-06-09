@@ -24,8 +24,8 @@ $print-links: false;
 }
 
 %font-title 			{ font-size: 2.5em; 	}
-%font-heading 		{ font-size: 1.5em; 	}
-%font-subheading 	{ font-size: 1.25em; 	}
+%font-heading 		{ font-size: 1.5em;	}
+%font-subheading 	{ font-size: 1.2em; 	}
 %font-standard 		{ font-size: 1em; 		}
 %font-small 			{ font-size: 0.83em; 	}
 
@@ -122,10 +122,6 @@ header {
 
 section {
 
-	h1 {
-		border-bottom: 1px solid $color-offwhite;
-	}
-
 	h1, h2 {
 		margin-bottom: 0.2em;
 	}
@@ -211,7 +207,7 @@ footer {
 
 // > 480px
 
-@media only screen and (min-width: 30em) {
+@media (min-width: 30em) {
 
 	header {
 
@@ -244,7 +240,7 @@ footer {
 
 // > 800px
 
-@media only screen and (min-width: 50em) {
+@media (min-width: 50em) {
 
 	.skills {
 		> * {
@@ -282,7 +278,7 @@ footer {
 	body {
 		max-width: none;
 		width: 100%;
-		font-size: 10pt !important;
+		font-size: 100%;
 	}
 
 	a {
@@ -309,7 +305,7 @@ footer {
 	.item-list {
 		li {
 			float: left;
-			width: 32%;
+			width: 25%;
 		}
 	}
 
