@@ -28,10 +28,11 @@
 
 			<h2>smallworld.js <small><em><a href="http://mikefowler.me/smallworld.js/">Documentation</a>, <a href="https://github.com/mikefowler/smallworld.js">Github</a></em></small></h2>
 			<p><em>A utility for efficiently drawing map overviews with markers.</em> At Findery, parts of our design required us to render, at times, dozens of Google maps on a page. A single piece of content, our “note”, contained two maps: neighborhood-level, and an “overview”. Sometimes a page would show a lengthy list of notes, and rendering these maps became a performance burden. smallworld.js came from those performance woes.</p>
-			<p>smallworld.js uses HTML Canvas, and draws a GeoJSON data source directly into it. Writing smallworld.js mandated that I learn a bit about map math, at first a painful experience and then one I came to enjoy. The utility projects coordinates, using the Mercator projection, onto map data sourced from Natural Earth.</p>
+			<p>smallworld.js uses HTML Canvas, and draws a GeoJSON data source directly into it. Writing smallworld.js mandated that I learn a bit about map math, at first a painful experience and then one I came to enjoy. The utility projects coordinates using the Mercator projection, with map data sourced from Natural Earth.</p>
 
 			<h2>webapp.findery.com <small><em><a href="http://webapp.findery.com">Website</a></em></small></h2>
 			<p><em>A Backbone/Marionette application backed by an Express API, aimed at performing well on Android devices.</em> While still not officially launched, much of my time at Findery in the past year has been spent on this. Between learning the internals of both Backbone and Marionette in exhaustive detail, and researching/experimenting with ways to improve performance and user experience on Android phones, this project has taught me a lot.</p>
+			
 			<br>
 			<h2>crossfade.js <small><em><a href="http://mikefowler.me/crossfade.js/">Documentation</a>, <a href="https://github.com/mikefowler/crossfade.js">Github</a></em></small></h2>
 			<p><em>Crossfades two images drawn into a Canvas as you scroll down a page.</em> Originally written as an experiment in re-creating one of Medium's design elements. This project allowed me to get my hands dirty with drawing image data into Canvas elements and implementing efficient draw loops using requestAnimationFrame.</p>
@@ -41,6 +42,9 @@
 
 			<h2>Companimation <small><em><a href="http://mikefowler.me/companimation/">Documentation</a>, <a href="https://github.com/mikefowler/companimation">Github</a></em></small></h2>
 			<p><em>An extension for Compass providing CSS Animation mixins and preset animations based on Animate.css</em>. Before the official Animation module landed in Compass, I published an extension of my own. Companimation, in addition to providing mixins for defining animations and keyframes, provided Animate.css animations as Sass placeholders, allowing a developer to quickly pull in only the animations they needed without bloating their output.</p>
+
+			<h2>Those Green Mountains <small><em><a href="http://thosegreenmountains.com/">Website</a>, <a href="https://github.com/thosegreenmountains/thosegreenmountains.github.com">Github</a></em></small></h2>
+			<p><em>A design + development collaboration highlighting the beauty and history of the Green Mountains in Vermont</em>. <a href="http://craigwinslow.com">Craig Winslow</a>, <a href="http://www.joshmfranklin.com/">Josh Franklin</a> and I collaborated on this project, with them handling design and with me handling code. I implemented parallax in two dimensions using CSS Transforms on multiple layers. The site also leverages the keyboard for navigation between “slides”.</p>
 
 		</section>
 
@@ -57,11 +61,11 @@
 		</section>
 
 		<section>
-
+			<br>
 			<h1>In Progress</h1>
 
 			<h2>Farmers Markets In… <small><em><a href="https://github.com/mikefowler/farmers-markets">Github</a></em></small></h2>
-			<p><em>Simple app for searching for farmers markets in an area, using the USDA Farmers Markets API</em>. While the USDA provides a web interface for searching for markets, and a rudimentary API for fetching data, both leave much to be desired. This project will accomplish two things: a frontend component with better design for searching for markets, and an API layer that provides better formatted USDA API responses and caching.</p>
+			<p><em>Simple app for searching for farmers markets in an area, using the USDA Farmers Markets API</em>. While the USDA provides a web interface for searching for markets, and a rudimentary API for fetching data, both leave much to be desired. This project will accomplish two things: a frontend component with better design for searching for markets, and an API layer that provides <a href="https://github.com/mikefowler/farmers-markets/blob/master/app/services/usda.js">better formatted USDA API responses</a> and <a href="https://github.com/mikefowler/farmers-markets/blob/master/app/controllers/search.js">caching</a>.</p>
 
 		</section>
 		
@@ -69,7 +73,7 @@
 
 	<footer role="contentinfo"> 
 
-		<p>You can also find me on <a href="http://github.com/mikefowler">Github</a>, <a href="http://twitter.com/michaelrfowler">Twitter</a> and <a href="http://linkedin.com/in/michaelrfowler/">LinkedIn</a>.<!--The code for this page is <a href="http://github.com/mikefowler/resume">available to all.</a>--></p>
+		<p>You can also find me on <a href="http://github.com/mikefowler">Github</a>, <a href="http://twitter.com/michaelrfowler">Twitter</a> and <a href="http://linkedin.com/in/michaelrfowler/">LinkedIn</a>.</p>
 
 		<p class="print-me">This document lives at http://resume.mikefowler.me</p>
 
